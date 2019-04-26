@@ -1,0 +1,7 @@
+/home/patrick/Downloads/MUSCOD-Intro/hoppingRobot_template/build/CMakeFiles/install/strip.dir
+/home/patrick/Downloads/MUSCOD-Intro/hoppingRobot_template/build/CMakeFiles/install/local.dir
+/home/patrick/Downloads/MUSCOD-Intro/hoppingRobot_template/build/CMakeFiles/hoppingrobot.dir
+/home/patrick/Downloads/MUSCOD-Intro/hoppingRobot_template/build/CMakeFiles/edit_cache.dir
+/home/patrick/Downloads/MUSCOD-Intro/hoppingRobot_template/build/CMakeFiles/rebuild_cache.dir
+/home/patrick/Downloads/MUSCOD-Intro/hoppingRobot_template/build/CMakeFiles/install.dir
+/home/patrick/Downloads/MUSCOD-Intro/hoppingRobot_template/build/CMakeFiles/list_install_components.dir

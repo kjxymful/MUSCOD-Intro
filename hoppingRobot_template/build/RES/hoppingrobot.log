@@ -1,0 +1,96 @@
+                  ___                
+This is MUSCOD-II (Release 6.0, Revision 3148) |\    /| |    | /   \ 000000        
+Copyright (C) 1995--2019, Simulation and Optimization Group |  \/  | |    | `---.       000     
+ |      |  \__/  \___/          00   
+Interdisciplinary Center for Scientific Computing (IWR)                                  00 
+Heidelberg University, Germany 00               | |              00
+ 00               | |              00
+ + MS-MINTOC extensions for mixed-integer optimal control  00              ___    ___    ___  
+ + PRSQP Partially Reduced SQP Version [ ]    00           /   \  /   \  |   \ 
+ + Algorithmic Extensions [ CLSQ LSQ ]      000       |      |     | |    |
+ + DEBUG enabled         000000  \___/  \___/  |___/ 
+
+Loading the following libraries dynamically:
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_prsqp_den.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_hess_update.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_tchk.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_solve_slse.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_cond_std.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_qps_qpopt.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_mssqp_standard.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_plot_pgplot.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_eval_ind.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_mintoc.so ... success.
+./libhoppingrobot.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkf45.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_strans.so ... success.
+/home/patrick/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkf45.so ... success.
+
+>>>>  Dimensions of structured NLP problem:
+                   # of discretization points NDIS =        22
+                               # of variables NVAR =       133
+                    # of equality constraints NEQ  =       118 (99 + 19)
+                  # of inequality constraints NIN  =       277 (11 + 133*2)
+
+>>>>  Parameters of MSSQP method:
+                final accuracy of NLP solution ACC =  1.00E-06
+                 initial integration tolerance     =  1.00E-08
+  # of homotopy steps in integration tolerance     =         0
+                   final integration tolerance TOL =  1.00E-08
+    regularization factor (as multiple of ACC)     =  0.00E+00
+    Levenberg Marquardt hessian regularization     =  0.00E+00
+                   maximum # of SQP iterations     =       400
+The lower constraint bound 22 is violated by more than feasibilty tolerance: var 0.686498 - LB 0.686498 = 0
+The upper constraint bound 24 is violated by more than feasibilty tolerance: UB -5.7035 - var -5.7035 = 0
+RECALC_QP (1 of max 5; number of possible active bounds sd = 12, sa = 0)
+The lower constraint bound 22 is violated by more than feasibilty tolerance: var 0.686498 - LB 0.686498 = 2.9976e-15
+The upper constraint bound 24 is violated by more than feasibilty tolerance: UB -5.7035 - var -5.7035 = -2.57572e-14
+RECALC_QP (2 of max 5; number of possible active bounds sd = 15, sa = 0)
+The lower constraint bound 22 is violated by more than feasibilty tolerance: var 0.686498 - LB 0.686498 = 2.9976e-15
+The upper constraint bound 24 is violated by more than feasibilty tolerance: UB -5.7035 - var -5.7035 = -2.57572e-14
+
+>>>>  Parameters of Hessian approximation method (BFGS update with Powell modification):
+                              initial trust radius =   806.654
+                   initial diagonal scaling factor = 0.000143147
+
+>>>>  SQP iterations
+
+ it qpit qpf   kkttol          sobj   |sinf|  |vstep|  |vstpr| |mulstp|       |lgrd|    alpha         merit crit stat
+  0                    0.000000E+00 7.33E+00
+
+
+****
+**** SQP iteration 0
+****
+The lower constraint bound 22 is violated by more than feasibilty tolerance: var 0.686498 - LB 0.686498 = 2.88658e-15
+The upper constraint bound 24 is violated by more than feasibilty tolerance: UB -5.7035 - var -5.7035 = -2.4869e-14
+  1   49 A R 1.27E+01  4.306409E+01 4.41E+00 4.03E+02 0.00E+00 6.96E+02 1.234290E-10 1.00E+00  1.191712E+02  REL SUCC
+
+
+****
+**** SQP iteration 1
+****
+
+****  terminated due to an error  ****
+
+>>>>  Operation counts for ODE solver RKF45S:
+                   total # of function evaluations =      4931
+                      total # of integration steps =       162
+                         total # of rejected steps =        14
+
+>>>>  Operation counts for stage transition solver STRANS:
+                   total # of function evaluations =        17
+                      total # of integration steps =         3
+
+>>>>  Wall time statistics:
+                      Sensitivity generation (IND) = 00:00.005 ( 5.29%)
+                      Integration of inhomogeneity = 00:00.000 ( 0.00%)
+                                 State integration = 00:00.001 ( 0.63%)
+                              Constraint reduction = 00:00.000 ( 0.05%)
+                                        Condensing = 00:00.004 ( 4.18%)
+                         Solution of condensed QPs = 00:00.004 ( 3.70%)
+                            Remaining calculations = 00:00.084 (86.16%)
+                                             Total = 00:00.098
+
+                                   Online graphics = 00:00.059 (37.70%)
+                                       Grand Total = 00:00.157

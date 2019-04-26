@@ -1,0 +1,54 @@
+CMAKE_MINIMUM_REQUIRED ( VERSION 2.6 )
+
+PROJECT( "muscod_hoppingrobot_application" CXX )
+
+LIST( APPEND CMAKE_MODULE_PATH
+	${PROJECT_SOURCE_DIR}/CMake
+	${PROJECT_SOURCE_DIR}/CMake/Modules
+)
+
+INCLUDE( SimOptDefaults )
+
+FIND_PACKAGE (RBDL REQUIRED)
+FIND_PACKAGE (Eigen3 3.0.0 REQUIRED)
+INCLUDE_DIRECTORIES ( ${RBDL_INCLUDE_DIR} ${EIGEN3_INCLUDE_DIR} )
+
+FIND_PACKAGE( MUSCOD REQUIRED )  # find and include "MUSCODConfig.cmake"
+IF( MUSCOD_FOUND )
+	INCLUDE( ${MUSCOD_USE_FILE} )
+ENDIF( MUSCOD_FOUND )
+
+###################################################################
+
+ADD_LIBRARY ( hoppingrobot
+	SRC/hoppingrobot.cc
+	)
+
+
+TARGET_LINK_LIBRARIES ( hoppingrobot
+	${RBDL_LIBRARIES}
+	${RBDL_LUAMODEL_LIBRARY}
+	${PGPLOT_CPGPLOT_LIBRARY}
+	${PGPLOT_PGPLOT_LIBRARY}
+)
+
+#ADD_LIBRARY ( hoppingrobot_min_impact
+#	SRC/hoppingrobot_min_impact.cc
+#	)
+#
+#
+#TARGET_LINK_LIBRARIES ( hoppingrobot_min_impact
+#	${RBDL_LIBRARIES}
+#	${RBDL_LUAMODEL_LIBRARY}
+#	${PGPLOT_CPGPLOT_LIBRARY}
+#	${PGPLOT_PGPLOT_LIBRARY}
+#)
+
+# COMMANDS TO BUILD DIRECTORY TREE #############################################
+
+EXECUTE_PROCESS(COMMAND mkdir -p ./RES)
+EXECUTE_PROCESS(COMMAND ln -s -f ${PROJECT_SOURCE_DIR}/SRC)
+EXECUTE_PROCESS(COMMAND ln -s -f ${PROJECT_SOURCE_DIR}/DAT)
+EXECUTE_PROCESS(COMMAND ln -s -f ${PROJECT_SOURCE_DIR}/model_hoppingrobot.lua)
+EXECUTE_PROCESS(COMMAND ln -s -f ${PROJECT_SOURCE_DIR}/default.plot)
+

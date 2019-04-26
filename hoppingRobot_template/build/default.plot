@@ -1,0 +1,1 @@
+/home/patrick/Downloads/MUSCOD-Intro/hoppingRobot_template/default.plot
